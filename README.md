@@ -1,6 +1,8 @@
 # dockerfiles
 Dockerfiles for various needs
 
+> Corresponding docker images can be found at https://hub.docker.com/u/lobster1234/
+
 # Usage
 
 1. Clone this repo, cd to the folder you'd want to build an image from.
@@ -34,7 +36,7 @@ Successfully built IMAGE_ID
 
 3. Look at the Dockerfile to see the port(s) exposed, like `solr` exposes `8983`, or `tomcat8` exposes `8080`
 
-4. Start a container with port mapping, like so
+4. Start a container with port mapping. You can then use localhost:port to interact with the container over HTTP or any other protocol. This example will allow you to view the Solr Web Console on http://localhost:9999
 
 `bash-3.2$ docker run -p9999:8983 IMAGE_ID`
 
